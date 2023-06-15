@@ -7,6 +7,11 @@
 Console.WriteLine("Enter the number of the day of the week ");
 int weekDayNum = Convert.ToInt32 (Console.ReadLine());
 
-if (weekDayNum == 6){Console.WriteLine ("It's Saturday, weekend");}
-else if (weekDayNum == 7){Console.WriteLine ("It's Sunday, weekend");}
-else {Console.WriteLine ("It's NOT weekend");}
+if (weekDayNum > 7)
+{
+    Console.WriteLine ("It's not the day of the week");
+}
+    if (weekDayNum == 6){Console.WriteLine ("It's Saturday, weekend");}
+    if (weekDayNum == 7){Console.WriteLine ("It's Sunday, weekend");}
+else 
+    if (weekDayNum < 6){Console.WriteLine ("It's NOT weekend");}
