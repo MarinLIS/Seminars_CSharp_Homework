@@ -16,7 +16,15 @@ void PalindromNumber (int Num)
        if (invNum1 == invNum11 && invNum2 == invNum22) Console.WriteLine ("your Number is Palindrom");
        else {Console.WriteLine("your number is NOT Palindrom");}
 }
-Console.WriteLine ("Enter your number ");
+Console.WriteLine ("Enter 5-digits number ");
 int number = Convert.ToInt32 (Console.ReadLine());
 
-PalindromNumber (number);
+if (number > 10000 && number < 99999 && number != 0) 
+{
+    PalindromNumber (number);
+}
+else if (number == 00000)Console.WriteLine("Your Number is incorrect");
+else
+{
+    Console.WriteLine("Your number is not 5-digits number");
+}
