@@ -5,11 +5,14 @@
 
 int Power (int userNumA, int userNumB)
 {
-    for (int count = 1; count != userNumB; count++)
+    int count_result = 1;
+    int powerTimes = 0;
+    while (powerTimes != userNumB)
     {
-        count = userNumA * userNumA;
+        count_result = count_result * userNumA;
+        powerTimes++;
     }
-    return count;
+    return count_result;
 }
 
 Console.WriteLine ("Enter NumberA = ");
@@ -18,6 +21,12 @@ int NumberA = Convert.ToInt32 (Console.ReadLine());
 Console.WriteLine ("Enter NumberB = ");
 int NumberB = Convert.ToInt32 (Console.ReadLine());
 
-int power_result = Power (NumberA, NumberB);
-
-Console.WriteLine (power_result);
+if (NumberB > 0)
+{
+    int power_result = Power (NumberA, NumberB);
+    Console.WriteLine ($"Number A in power number B is: {power_result}");
+}
+else
+{
+    Console.WriteLine ($"Number B is incorrect");
+}
