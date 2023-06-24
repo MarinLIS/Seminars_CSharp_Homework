@@ -26,12 +26,12 @@ void PrintArray (int [] arrayNew)
 
 void EvenCounter (int [] myArray)
 {
-    int count = 0;
+    int sum = 0;
     for (int i = 1; i < myArray.Length; i=i+2)
     {
-        count ++;
+        sum += myArray[i];
     }
-    Console.WriteLine($" -> {count} elements with not-even indices");
+    Console.WriteLine($" -> {sum}");
 }
 int [] random = CreateArray();
 PrintArray (random);
