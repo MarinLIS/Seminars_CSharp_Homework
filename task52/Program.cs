@@ -38,15 +38,15 @@ void ArrayToPrint (int [,] array2dToPrint)
 
 void PrintAvg (int [,] array)
 {
-    int n = array.GetLength(0);
-    for (int i = 0; i < n; i++)
+    // int n = array.GetLength(0);
+    for (int i = 0; i < array.GetLength(0); i++)
         {
             double avgSum = 0;
             double count =0;
-            for (int j = 0; j < n; j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
                 count+= array[j, i];
-                avgSum = Math.Round((count / n), 2);
+                avgSum = Math.Round((count / array.GetLength(1)), 2);
             }
             Console.WriteLine("Sum in {0} column: {1}", i, avgSum);
         }
